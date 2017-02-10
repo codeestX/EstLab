@@ -42,8 +42,8 @@ var vm = new Vue({
             items: this.initData(),
             show: false,
             urls: [
-                { text: 'SITE', link: 'https://codeest.moe' },
-                { text: 'BLOG', link: 'https://blog.codeest.moe'},
+                { text: 'SITE', link: 'http://codeest.moe' },
+                { text: 'BLOG', link: 'http://blog.codeest.moe'},
                 { text: 'GITHUB', link: 'https://github.com/codeestX' },
                 { text: 'CONTACT', link: 'https://t.me/codeest' },
                 { text: 'ABOUT', link: 'http://me.codeest.moe' }
