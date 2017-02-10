@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+        <title>
+            Est's Lab
+        </title>
+        <link href="./main.css" rel="stylesheet" media="all">
+    </head>
+
+    <body>
+        <div id="container">
+            <header>
+                Est's Lab
+                <div id="head_menu">
+                    <ul>
+                        <menu-item style="display: inline" v-for="url in urls" v-bind:menu="url"></menu-item>
+                    </ul>
+                </div>
+            </header>
+            <div :style="{ backgroundColor: tweenedCSSColor }">
+                <div class="me">
+                    <img src="./images/avt.png" width="200" height="200"/>
+                    <p>
+                        Host on <a href="https://www.github.com">GitHub</a><br/>
+                        Build with <a href="https://cn.vuejs.org/v2/guide/">Vue.js 2.0</a><br/>
+                        Theme ref <a href="https://yalantis.com/technologies/">Yalantis</a>
+                    </p>
+                </div>
+                <div class="intro">
+                    <h1 class="section-title">Let’s Talk [:code]</h1>
+                    <hr>
+                    <p class="section-intro-text">
+                        Talk is cheap.Show me the code.<br/>
+                        Good good study. Day day up.<br/>
+                        Write the code. Change the world.
+                    </p>
+                </div>
+                <div class="tech">
+                    <img src="./images/bg.png"/>
+                </div>
+                <div id="content_menu" class="content">
+                    <transition-group
+                            name="staggered-fade"
+                            tag="ul"
+                            :css="false"
+                            v-on:before-enter="beforeEnter"
+                            v-on:enter="enter"
+                            v-on:leave="leave"
+                    >
+                        <project-item style="float: left" v-for="(item, index) in items" :project="item" :key="item.link" :data-index="index" v-show="show"></project-item>
+                    </transition-group>
+                </div>
+                <div class="placeholder" style="height: 500px; background: transparent" v-show="!show">
+
+                </div>
+                <div class="bottom">
+                    <p>
+                        The Star And Thank Author License (SATA)<br/>
+
+                        Copyright © <2017 Est>(codeest.dev@gmail.com)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="./vue.js"></script>
+    <script src="./tween.js"></script>
+    <script src="./color.js"></script>
+    <script src="./velocity.js"></script>
+    <script src="./common-min.js"></script>
+</html>
