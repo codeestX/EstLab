@@ -103,11 +103,9 @@ var vm = new Vue({
         },
         beforeEnter: function (el) {
             el.style.opacity = 0
-            console.log('beforeEnter');
         },
         enter: function (el, done) {
             var delay = el.dataset.index * 200
-            console.log('enter');
             setTimeout(function () {
                 Velocity(
                     el,
@@ -118,7 +116,6 @@ var vm = new Vue({
         },
         leave: function (el, done) {
             var delay = el.dataset.index * 200
-            console.log('leave');
             setTimeout(function () {
                 Velocity(
                     el,
