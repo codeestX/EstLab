@@ -21,8 +21,8 @@ Vue.component('project-item', {
   ',
 })
 
-const icons = ["./src/assets/ic_geeknews.png", "./src/assets/ic_launcher.png", "./src/assets/ic_launcher.png", "./src/assets/ic_launcher.png"];
-const titles = ["GeekNews v1.3.0", "ENViews v1.0.3", "ECardFlow v1.0.4", "MoeFM v1.0.0"];
+const icons = ["./src/assets/ic_geeknews.png", "./src/assets/ic_launcher.png", "./src/assets/ic_launcher.png", "./src/assets/ic_launcher.png", "./src/assets/ic_launcher.png"];
+const titles = ["GeekNews v1.3.0", "ENViews v1.0.3", "ECardFlow v1.0.4", "MoeFM v1.0.0", "RxSocketClient"];
 const dess = ["A pure reading App based on Material Design + MVP + RxJava + Retrofit + Dagger2 + Realm + Glide",
                 "A cool dynamic view library",
                 "A custom ViewPager for multiple card flow system. && A layout provide beautiful background effects for ViewPager",
