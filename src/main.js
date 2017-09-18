@@ -58,7 +58,8 @@ var vm = new Vue({
                 blue: 0.11,
                 alpha: 1
             },
-            tweenedColor: {}
+            tweenedColor: {},
+            switchPositionY: 700
         }
     },
     watch: {
@@ -97,10 +98,10 @@ var vm = new Vue({
         },
         updateScroll: function () {
             this.scrollPosition = window.scrollY;
-            if (this.scrollPosition > 700 && !this.show) {
+            if (this.scrollPosition > this.switchPositionY && !this.show) {
                 this.show = true;
                 this.color = new Color('#f6f6f6').toRGB();
-            } else if (this.scrollPosition <= 700 && this.show) {
+            } else if (this.scrollPosition <= this.switchPositionY && this.show) {
                 this.show = false;
                 this.color = new Color('#17181d').toRGB();
             }
@@ -109,7 +110,7 @@ var vm = new Vue({
             el.style.opacity = 0
         },
         enter: function (el, done) {
-            var delay = el.dataset.index * 200
+            var delay = el.dataset.index * 260
             setTimeout(function () {
                 Velocity(
                     el,
@@ -119,7 +120,7 @@ var vm = new Vue({
             }, delay)
         },
         leave: function (el, done) {
-            var delay = el.dataset.index * 200
+            var delay = el.dataset.index * 260
             setTimeout(function () {
                 Velocity(
                     el,
@@ -132,6 +133,7 @@ var vm = new Vue({
     mounted() {
         window.addEventListener('scroll', this.updateScroll);
         this.tweenedColor = Object.assign({}, this.color);
+        this.switchPositionY = this.$refs.check.offsetTop;
     },
     destroy() {
         window.removeEventListener('scroll', this.updateScroll);

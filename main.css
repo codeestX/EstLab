@@ -85,6 +85,10 @@ ul {
     opacity: 0.6;
 }
 
+.me p{
+    line-height: 1.4;
+}
+
 .intro .section-title {
     font-family: 'Radikal', Helvetica, Arial, sans-serif;
     margin: auto;
@@ -97,6 +101,7 @@ ul {
 }
 
 .tech {
+    display: table;
     margin: 100px auto 0;
 }
 
