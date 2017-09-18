@@ -21,15 +21,19 @@ Vue.component('project-item', {
   ',
 })
 
-const icons = ["./src/assets/ic_geeknews.png", "./src/assets/ic_launcher.png", "./src/assets/ic_launcher.png"];
-const titles = ["GeekNews v1.3.0", "ENViews v1.0.3", "ECardFlow v1.0.4"];
+const icons = ["./src/assets/ic_geeknews.png", "./src/assets/ic_launcher.png", "./src/assets/ic_launcher.png", "./src/assets/ic_launcher.png"];
+const titles = ["GeekNews v1.3.0", "ENViews v1.0.3", "ECardFlow v1.0.4", "MoeFM v1.0.0"];
 const dess = ["A pure reading App based on Material Design + MVP + RxJava + Retrofit + Dagger2 + Realm + Glide",
                 "A cool dynamic view library",
-                "A custom ViewPager for multiple card flow system. && A layout provide beautiful background effects for ViewPager"];
-const types = ["Android APP", "Android Lib", "Android Lib"];
+                "A custom ViewPager for multiple card flow system. && A layout provide beautiful background effects for ViewPager",
+                "A light MusicPlayer build with React Native & Redux for both Android and iOS",
+                "Reactive Socket APIs for Android, Java and Kotlin, powered by RxJava2"];
+const types = ["Android APP", "Android Lib", "Android Lib", "ReactNative APP", "Java Lib"];
 const links = ["https://github.com/codeestX/GeekNews",
                 "https://github.com/codeestX/ENViews",
-                "https://github.com/codeestX/ECardFlow"];
+                "https://github.com/codeestX/ECardFlow",
+                "https://github.com/codeestX/MoeFM",
+                "https://github.com/codeestX/RxSocketClient"];
 
 var contents = new Array(icons.length);
 var Color = net.brehaut.Color
